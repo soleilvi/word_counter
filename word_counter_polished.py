@@ -1,3 +1,8 @@
+"""
+By Soleil Vivero
+04/03/21
+"""
+
 from tkinter import *
 
 root = Tk()
@@ -10,8 +15,9 @@ wordCountLabel = Label(root, padx=10, pady=5, text='Word Count:')
 def word_counter():
     num = 0
     txt = txtbox.get(1.0, END)
-    txt = txt[:-1]  # Removes the last character of the string since tk.Text \
-    # attaches an empty ccharacter at the end of what you type in.
+    txt = txt[:-1]  # Removes the last character of the string since
+                    # tk.Text attaches an empty character at the end
+                    # of what you type in.
     txtLength = len(txt)
 
     for char, index in zip(txt, range(0, txtLength + 1)):
